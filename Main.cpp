@@ -11,9 +11,10 @@ int load()
 	try
 	{
 		ip.open("ssm.db", std::ios_base::in);
+		if (!ip.is_open()) throw "NoDatabaseExist";
 		ssm.loadFromDB(ip);
 	}
-	catch (std::exception& e)
+	catch (const char* c)
 	{
 		printf("LOAD ERROR. Creating a new database...\n");
 	}

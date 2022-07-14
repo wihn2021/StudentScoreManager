@@ -9,6 +9,5 @@ public:
 	void Serialize(std::ostream&);
 	void DisSerialize(std::istream&);
 	void AddAScore(AbstractScore*);
-	void RemoveScore(AbstractScore*);
 };
 

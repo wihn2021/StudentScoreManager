@@ -39,6 +39,11 @@ Grade score2GPA(int sc)
 
 int StudentScoreManager::SaveToDB(std::ostream& op)
 {
+	/*
+	* 这里把三个vector中的数据持久化存储，顺序依次为学生、课程、成绩。
+	* 每次调用一个对象的序列化和反序列化函数，当然，这里写成运算符重载也可以。
+	* 下面的load函数就是逆过程了，两个函数对照着非常整齐。
+	*/
 	int tempInt;
 	tempInt = students.size();
 	op<<tempInt<<std::endl;

@@ -21,6 +21,9 @@ public:
     void setValue(int);
     bool operator==(const Score& e) const
     {
+        /*
+        * 这里是==的运算符重载。
+        */
         if (Value == e.Value && co == e.co) return true;
         return false;
     }
